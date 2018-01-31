@@ -424,7 +424,7 @@
                         <aside class="column-1_4 widget widget_socials">
                             <div style="text-align: center;" class="widget_inner">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="/">
                                         <img src="{% static "img/footer.png" %}" class="logo_main" alt="">
                                     </a>
                                 </div>
@@ -450,7 +450,7 @@
                             <ul>
                                 {% for foo in publicaciones %}
                                     <li>
-                                    <a href="">{{ foo.titulo }}</a>
+                                    <a href="/publicacion/{{ publicacion.id }}">{{ foo.titulo }}</a>
                                 </li>
                                 {% endfor %}
                                 
