@@ -152,3 +152,14 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "")
 MEDIA_URL = '/'
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'mail.cotopaxitenisclub.com'
+EMAIL_PORT = 26
+EMAIL_HOST_USER = 'correo@cotopaxitenisclub.com'
+EMAIL_HOST_PASSWORD = 'ctc2017@'
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'Cotopaxi Tenis Club <correo@cotopaxitenisclub.com>'

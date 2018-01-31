@@ -36,6 +36,7 @@ path('ranking', views.ranking, name='ranking'),
 path('reinas', views.reinas, name='reinas'),
 path('tenis', views.tenis, name='tenis'),
 path('blog', views.blog, name='blog'),
+path('mensaje', views.mensaje, name='mensaje'),
     path('publicacion/<int:idpost>',views.publicacion, name='publicacion'),
 
 
