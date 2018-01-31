@@ -12,4 +12,10 @@ class Publicacion(models.Model):
     categoria = models.ForeignKey(Categoria,  on_delete='cascade')
     fecha = models.DateTimeField(auto_now_add=True)
     def __str__(self):
+        return self.tit
+
+class circular(models.Model):
+    titulo = models.CharField(max_length=40)
+    documento = models.FileField(upload_to='imagenes/')
+    def __str__(self):
         return self.titulo
