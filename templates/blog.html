@@ -25,6 +25,7 @@
 
 
                     {% for foo in publicaciones %}
+                        <a href="/publicacion/{{ foo.id }}">
                         <div class="isotope_item isotope_column_3">
                         <article class="post_item odd">
                             <div class="post_featured">
@@ -43,6 +44,7 @@
                             </div>
                         </article>
                     </div>
+                        </a>
                     {% endfor %}
 
                     <!-- /Isotope item -->
