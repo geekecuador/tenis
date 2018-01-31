@@ -12,7 +12,7 @@ class Publicacion(models.Model):
     categoria = models.ForeignKey(Categoria,  on_delete='cascade')
     fecha = models.DateTimeField(auto_now_add=True)
     def __str__(self):
-        return self.tit
+        return self.titulo
 
 class Circular(models.Model):
     titulo = models.CharField(max_length=40)
