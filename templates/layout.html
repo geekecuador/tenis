@@ -93,7 +93,7 @@
                 <ul id="menu_pushy" class="menu_pushy_nav">
                     <!-- Menu Item: Home -->
                     <li class="menu-item current-menu-ancestor current-menu-parent">
-                        <a href="index.html">INICIO</a>
+                        <a href="/">INICIO</a>
                     </li>
                     <!-- /Menu Item: Home -->
                     <!-- Menu Item: Features -->
@@ -101,22 +101,22 @@
                         <a href="#">EL CLUB</a>
                         <ul class="sub-menu">
                             <li class="menu-item">
-                                <a href="historia.html">HISTORIA</a>
+                                <a href="historia">HISTORIA</a>
                             </li>
                             <li class="menu-item">
-                                <a href="directorio.html">DIRECTORIO</a>
+                                <a href="directorio">DIRECTORIO</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="#">GALERIA</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item">
-                                        <a href="presidentes.html">PRESIDENTES</a>
+                                        <a href="presidentes">PRESIDENTES</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="reinas.html">REINAS</a>
+                                        <a href="reinas">REINAS</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="estatutos.html">ESTATUTOS</a>
+                                        <a href="estatutos">ESTATUTOS</a>
                                     </li>
                                 </ul>
                             </li>
@@ -132,37 +132,37 @@
                         <a href="#">ACTIVIDADES</a>
                         <ul class="sub-menu">
                             <li class="menu-item">
-                                <a href="tenis.html">ESCUELA DE TENIS</a>
+                                <a href="tenis">ESCUELA DE TENIS</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="#">TORNEOS</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item">
-                                        <a href="ranking.html" title="">TORNEO RANKING</a>
+                                        <a href="ranking" title="">TORNEO RANKING</a>
                                     </li>
 
                                     <li class="menu-item">
-                                        <a href="dobles.html" title="">TORNEO DE DOBLES</a>
+                                        <a href="dobles" title="">TORNEO DE DOBLES</a>
                                     </li>
 
                                     <li class="menu-item">
-                                        <a href="master.html" title="">TORNEO MASTER</a>
-                                    </li>
-
-
-                                    <li class="menu-item">
-                                        <a href="daviscup.html" title="">TORNEO COTOPAXI DAVIS CUP</a>
+                                        <a href="master" title="">TORNEO MASTER</a>
                                     </li>
 
 
                                     <li class="menu-item">
-                                        <a href="cotopaxi.html" title="">ASCENSO AL COTOPAXI</a>
+                                        <a href="daviscup" title="">TORNEO COTOPAXI DAVIS CUP</a>
+                                    </li>
+
+
+                                    <li class="menu-item">
+                                        <a href="cotopaxi" title="">ASCENSO AL COTOPAXI</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="menu-item">
-                                <a href="eventos.html">ORGANIZACION DE EVENTOS</a>
+                                <a href="eventos">ORGANIZACION DE EVENTOS</a>
                             </li>
 
                         </ul>
@@ -170,12 +170,12 @@
                     <!-- /Menu Item: About -->
                     <!-- Menu Item: Events -->
                     <li class="menu-item">
-                        <a href="#">NOVEDADES</a>
+                        <a href="blog">NOVEDADES</a>
 
                     </li>
                     <!-- /Menu Item: Events -->
                     <li class="menu-item">
-                        <a href="contacto.html">CONTACTO</a>
+                        <a href="contacto">CONTACTO</a>
                     </li>
                 </ul>
                 <!-- Contact Info -->
@@ -186,7 +186,7 @@
                     </address>
                     <address class="contact_phones">
                         <span>TELÉFONO:</span>
-                        032262086 / 0995915350,
+                        032262086 / 0995915350
                     </address>
                     <address class="contact_email">
                         <span>EMAIL:</span>
@@ -448,15 +448,13 @@
                         <aside class="column-1_4 widget widget_recent_entries">
                             <h5 class="widget_title">ULTIMAS NOTICAS</h5>
                             <ul>
-                                <li>
-                                    <a href="post-single.html">Noticia 1, texto de ejemplo</a>
+                                {% for foo in publicaciones %}
+                                    <li>
+                                    <a href="">{{ foo.titulo }}</a>
                                 </li>
-                                <li>
-                                    <a href="post-single.html">Noticia 2, texto de ejemplo</a>
-                                </li>
-                                <li>
-                                    <a href="post-single.html">Noticia 3, texto de ejemplo</a>
-                                </li>
+                                {% endfor %}
+                                
+                                
                             </ul>
                         </aside><!-- /Widget: Recent Posts --><!-- Widget: Text -->
                         <aside class="column-1_4 widget widget_text">

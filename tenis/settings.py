@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ctc.apps.CtcConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,27 @@ STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR,  'static')
 
 
+
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'djangobower.finders.BowerFinder',
+# )
+#
+# BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, "components")
+#
+# BOWER_INSTALLED_APPS = (
+#     'jquery',
+#     'jquery-ui',
+#     'bootstrap'
+# )
+#
+#
+# TEMPLATE_LOADERS = (
+#     'django.template.loaders.filesystem.Loader',
+#     'django.template.loaders.app_directories.Loader',
+# )
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "")
+MEDIA_URL = '/'

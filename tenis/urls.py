@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 from ctc import views
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,6 +35,8 @@ path('presidentes', views.presidentes, name='presidentes'),
 path('ranking', views.ranking, name='ranking'),
 path('reinas', views.reinas, name='reinas'),
 path('tenis', views.tenis, name='tenis'),
+path('blog', views.blog, name='blog'),
+    path('publicacion/<int:idpost>',views.publicacion, name='publicacion'),
 
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

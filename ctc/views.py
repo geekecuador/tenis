@@ -1,62 +1,89 @@
 from django.shortcuts import render
-
+from .models import Categoria, Publicacion
 
 # Create your views here.
+
+
+def publicacion(request, idpost):
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    publicacion = Publicacion.objects.get(id=idpost)
+    return render(request, '',{
+        "publicacion": publicacion,"publicaciones":publicaciones
+    })
+
 def index(request):
-    return render(request, 'index.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'index.html', {"publicaciones":publicaciones})
 
 
 def contacto(request):
-    return render(request, 'contacto.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'contacto.html', {"publicaciones":publicaciones})
 
+def blog(request):
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'blog.html', {"publicaciones":publicaciones})
 
 def cotopaxi(request):
-    return render(request, 'cotopaxi.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'cotopaxi.html', {"publicaciones":publicaciones})
 
 
 def daviscup(request):
-    return render(request, 'daviscup.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'daviscup.html', {"publicaciones":publicaciones})
 
 
 def directorio(request):
-    return render(request, 'directorio.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'directorio.html', {"publicaciones":publicaciones})
 
 
 def dobles(request):
-    return render(request, 'dobles.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'dobles.html', {"publicaciones":publicaciones})
 
 
 def estatutos(request):
-    return render(request, 'estatutos.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'estatutos.html', {"publicaciones":publicaciones})
 
 
 def eventos(request):
-    return render(request, 'eventos.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'eventos.html', {"publicaciones":publicaciones})
 
 
 def historia(request):
-    return render(request, 'historia.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'historia.html', {"publicaciones":publicaciones})
 
 
 def master(request):
-    return render(request, 'master.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'master.html', {"publicaciones":publicaciones})
 
 
 def presidentes(request):
-    return render(request, 'presidentes.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'presidentes.html', {"publicaciones":publicaciones})
 
 
 def ranking(request):
-    return render(request, 'ranking.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'ranking.html', {"publicaciones":publicaciones})
 
 
 def reinas(request):
-    return render(request, 'reinas.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'reinas.html', {"publicaciones":publicaciones})
 
 
 def tenis(request):
-    return render(request, 'tenis.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'tenis.html', {"publicaciones":publicaciones})
 
 
 def contacto(request):
-    return render(request, 'contacto.html', {})
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    return render(request, 'contacto.html', {"publicaciones":publicaciones})

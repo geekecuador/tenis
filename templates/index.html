@@ -146,18 +146,19 @@
                                                 <div class="woocommerce columns-4">
                                                     <ul class="products">
                                                         <!-- Product item -->
+                                                        {% for publicacion in publicaciones %}
                                                         <li class="product first">
                                                             <div class="post_item_wrap">
                                                                 <div class="post_featured">
                                                                     <div class="post_thumb">
-                                                                        <a class="hover_icon hover_icon_link" href="shop-product-page.html">
-                                                                            <img src="http://placehold.it/300x300" alt="product" title="product" />
+                                                                        <a class="hover_icon " href="shop-product-page.html">
+                                                                            <img src="{{ publicacion.imagen.url }}" alt="product" title="product" />
                                                                         </a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="post_content">
                                                                     <a href="#">
-                                                                        <h3>Noticia 1, titulo de ejemplo</h3>
+                                                                        <h3>{{ publicacion.titulo }}</h3>
                                                                         <span class="price">
                                                                             <span class="woocommerce-Price-amount amount">
                                                                                 <span class="woocommerce-Price-currencySymbol"></span>Ver más
@@ -168,79 +169,9 @@
                                                                 </div>
                                                             </div>
                                                         </li>
-                                                        <!-- /Product item -->
-                                                        <!-- Product item -->
-                                                        <li class="product">
-                                                            <div class="post_item_wrap">
-                                                                <div class="post_featured">
-                                                                    <div class="post_thumb">
-                                                                        <a class="hover_icon hover_icon_link" href="shop-product-page.html">
-                                                                            <img src="http://placehold.it/300x300"  alt="product" title="product" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="post_content">
-                                                                    <a href="#">
-                                                                        <h3>Noticia 2, titulo de ejemplo</h3>
-                                                                        <span class="price">
-                                                                            <span class="woocommerce-Price-amount amount">
-                                                                                <span class="woocommerce-Price-currencySymbol"></span>Ver más
-                                                                            </span>
-                                                                        </span>
-                                                                    </a>
+                                                        {% endfor %}
 
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <!-- /Product item -->
-                                                        <!-- Product item -->
-                                                        <li class="product">
-                                                            <div class="post_item_wrap">
-                                                                <div class="post_featured">
-                                                                    <div class="post_thumb">
-                                                                        <a class="hover_icon hover_icon_link" href="shop-product-page.html">
-                                                                            <img alt="" src="http://placehold.it/300x300" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="post_content">
-                                                                    <a href="shop-product-page.html">
-                                                                        <h3>Noticia 3, título de ejemplo</h3>
-                                                                        <span class="price">
-                                                                            <span class="woocommerce-Price-amount amount">
-                                                                                <span class="woocommerce-Price-currencySymbol"></span>Ver más
-                                                                            </span>
-                                                                        </span>
-                                                                    </a>
 
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <!-- /Product item -->
-                                                        <!-- Product item -->
-                                                        <li class="product last">
-                                                            <div class="post_item_wrap">
-                                                                <div class="post_featured">
-                                                                    <div class="post_thumb">
-                                                                        <a class="hover_icon hover_icon_link" href="shop-product-page.html">
-                                                                            <img src="http://placehold.it/300x300" alt="product" title="product" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="post_content">
-                                                                    <a href="shop-product-page.html">
-                                                                        <h3>Noticia 4, título de ejemplo</h3>
-                                                                        <span class="price">
-                                                                            <span class="woocommerce-Price-amount amount">
-                                                                                <span class="woocommerce-Price-currencySymbol"></span>Ver más
-                                                                            </span>
-                                                                        </span>
-                                                                    </a>
-
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <!-- /Product item -->
                                                     </ul>
                                                 </div>
                                             </div>
