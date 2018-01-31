@@ -1,6 +1,6 @@
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
-from .models import Categoria, Publicacion
+from .models import Categoria, Publicacion, Circular
 
 # Create your views here.
 

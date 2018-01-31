@@ -14,7 +14,7 @@ class Publicacion(models.Model):
     def __str__(self):
         return self.tit
 
-class circular(models.Model):
+class Circular(models.Model):
     titulo = models.CharField(max_length=40)
     documento = models.FileField(upload_to='imagenes/')
     def __str__(self):
