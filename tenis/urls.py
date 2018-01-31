@@ -37,7 +37,7 @@ path('reinas', views.reinas, name='reinas'),
 path('tenis', views.tenis, name='tenis'),
 path('blog', views.blog, name='blog'),
 path('mensaje', views.mensaje, name='mensaje'),
-    path('publicacion/<int:idpost>',views.publicacion, name='publicacion'),
+path('publicacion/<int:idpost>',views.publicacion, name='publicacion'),
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
