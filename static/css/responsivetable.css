@@ -1,0 +1,15 @@
+#zonas{
+    padding-right: 10%;
+    padding-left: 10%;
+}
+@media only screen 
+and (min-device-width : 0px) 
+and (max-device-width : 500px) 
+{ 
+  #zonas1{
+    display: none;
+  }
+  #zonas{
+    display: none;
+  }
+}
