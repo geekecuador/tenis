@@ -23,7 +23,7 @@ def mensaje(request):
         asunto,
         mensaje + " de parte de: "+nombre+" con email: "+email,
         'correo@cotopaxitenisclub.com',
-        ['correo@cotopaxitenisclub.com'],
+        ['administracion@cotopaxitenisclub.com','cotopaxitenisclub@gmail.com'],
         fail_silently=False,)
         publicaciones = Publicacion.objects.order_by("-fecha")[:5]
         circular = Circular.objects.get(titulo='circular')
@@ -118,6 +118,13 @@ def tenis(request):
     publicaciones = Publicacion.objects.order_by("-fecha")[:5]
     circular = Circular.objects.get(titulo='circular')
     return render(request, 'tenis.html', {"publicaciones":publicaciones,"circular":circular})
+
+def instalaciones(request):
+    publicaciones = Publicacion.objects.order_by("-fecha")[:5]
+    circular = Circular.objects.get(titulo='circular')
+    return render(request, 'instalaciones.html', {"publicaciones":publicaciones,"circular":circular})
+
+
 
 
 def contacto(request):
