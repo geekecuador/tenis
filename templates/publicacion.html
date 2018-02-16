@@ -30,7 +30,7 @@
                                         <img src="{{ publicacion.imagen.url }}" alt=""/>
 
                                     </figure>
-                                    <p style="text-align: justify;">{{ publicacion.contenido }}</p>
+                                    <p style="text-align: justify;">{{ publicacion.contenido | safe }}</p>
 
                                 </div>
                             </div>
